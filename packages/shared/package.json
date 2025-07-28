@@ -1,0 +1,65 @@
+{
+  "name": "@allerscan/shared",
+  "version": "1.0.0",
+  "description": "Shared utilities and types for AllerScan",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "tesseract.js": "^5.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "@types/node": "^20.8.0",
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "jsdom": "^23.0.1"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./ocr": {
+      "types": "./dist/ocr/index.d.ts",
+      "import": "./dist/ocr/index.js",
+      "require": "./dist/ocr/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "ocr",
+    "tesseract",
+    "image-processing",
+    "text-recognition",
+    "allerscan"
+  ],
+  "author": "AllerScan Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skkuhg/allerscan.git",
+    "directory": "packages/shared"
+  }
+}
